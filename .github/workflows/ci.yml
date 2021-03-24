@@ -11,7 +11,7 @@ jobs:
         run: echo "First line of the test workflow"
 
       - name: Install composer dependencies
-        run: composer install --ignore-platform-reqs
+        run: cd ../ && composer install --ignore-platform-reqs
 
       - name: Run Unit test
         run: composer phpunit
