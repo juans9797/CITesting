@@ -7,11 +7,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
       - name: Name the CI log
-        run: echo "First line of the test workflow" && ls -la
+        run: echo "First line of the test workflow"
 
       - name: Install composer dependencies
-        run: cd ../ && composer install --ignore-platform-reqs
+        run: composer install --ignore-platform-reqs
 
       - name: Run Unit test
         run: composer phpunit
