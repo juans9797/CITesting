@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Name the CI log
-        run: echo "First line of the test workflow"
+        run: echo "First line of the test workflow" && ls -la
 
       - name: Install composer dependencies
         run: cd ../ && composer install --ignore-platform-reqs
